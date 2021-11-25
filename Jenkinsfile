@@ -1,7 +1,7 @@
 pipeline {
     agent {
-        node  {
-             label 'docker-build-agent'
+        docker  {
+             image 'docker-mike'
         }
     }
     stages {
