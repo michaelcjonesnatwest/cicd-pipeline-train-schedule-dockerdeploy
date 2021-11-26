@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker  {
-             image 'docker-mike'
-        }
-    }
+    agent { node 'master' }
     stages {
         stage('Build') {
             steps {
