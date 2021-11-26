@@ -1,5 +1,9 @@
 pipeline {
-    agent { node 'jenkins/agent2' }
+    agent {
+        docker {
+            image 'jenkins/agent2'
+        }
+    }
     stages {
         stage('Build') {
             steps {
